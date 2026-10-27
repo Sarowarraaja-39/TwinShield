@@ -1,0 +1,3 @@
+Model,Accuracy,Attack Precision,Attack Recall,Attack F1,False Alarm Rate On Normal,Missed Attack Rate,TP_attack,FN_attack,FP_attack,TN_attack,Provenance
+Logistic Regression,0.9553276165207842,0.880101396631767,0.8514714726001654,0.8655497502220779,0.023569775700506335,0.14852852739983463,90617,15807,12345,511419,Recomputed from counts in ORIGINAL SAVED confusion-matrix PNG; NOT a fresh dataset run
+TwinShield Random Forest,0.9976578417868953,0.9921960004502307,0.9939487333684132,0.9930715935334873,0.001588501691601561,0.0060512666315868605,105780,644,832,522932,Recomputed from counts in ORIGINAL SAVED confusion-matrix PNG; NOT a fresh dataset run

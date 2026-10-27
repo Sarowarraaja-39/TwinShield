@@ -1,0 +1,14 @@
+{
+  "mode": "synthetic",
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "/workspace/scratch/91418a8cf18c/audit_work/run_notebook_audit.py",
+    "/workspace/scratch/91418a8cf18c/review_input/Dissertation.ipynb",
+    "synthetic"
+  ],
+  "cwd": "/workspace/scratch/91418a8cf18c/TwinShield_Code_Review/synthetic",
+  "exit_code": 0,
+  "stdout": "CELL 02 ok 0.063s\nCELL 04 ok 0.061s\nCELL 06 ok 0.005s\nCELL 07 ok 0.053s\nCELL 08 ok 0.002s\nCELL 09 ok 0.001s\nCELL 10 ok 0.007s\nCELL 11 ok 0.001s\nCELL 14 ok 0.163s\nCELL 15 ok 0.001s\nCELL 17 ok 0.052s\nCELL 19 ok 0.417s\nCELL 21 ok 0.344s\nCELL 23 ok 0.173s\nCELL 25 ok 0.001s\nCELL 26 ok 0.001s\nCELL 27 ok 0.003s\nCELL 28 ok 0.003s\nCELL 30 ok 0.001s\nCELL 31 ok 0.002s\nCELL 33 ok 0.007s\nCELL 35 ok 0.563s\nCELL 37 ok 0.016s\nCELL 39 ok 0.207s\nCELL 41 ok 0.005s\nCELL 43 ok 0.119s\nCELL 45 ok 0.119s\nCELL 46 ok 0.001s\nCELL 48 ok 0.158s\nFINAL ok cells 29 / 29\n",
+  "stderr": "",
+  "wall_timeout_seconds": 150
+}

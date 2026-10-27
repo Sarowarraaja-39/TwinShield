@@ -1,0 +1,199 @@
+CELL 2: ok
+
+CELL 4: ok
+Dataset shape: 2,416 rows x 53 columns
+
+CELL 6: ok
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 2416 entries, 0 to 2415
+Data columns (total 53 columns):
+ #   Column                       Non-Null Count  Dtype  
+---  ------                       --------------  -----  
+ 0   Destination Port             2416 non-null   float64
+ 1   Flow Duration                2416 non-null   float64
+ 2   Total Fwd Packets            2416 non-null   float64
+ 3   Total Length of Fwd Packets  2416 non-null   float64
+ 4   Fwd Packet Length Max        2416 non-null   float64
+ 5   Fwd Packet Length Min        2416 non-null   float64
+ 6   Fwd Packet Length Mean       2416 non-null   float64
+ 7   Fwd Packet Length Std        2416 non-null   float64
+ 8   Bwd Packet Length Max        2416 non-null   float64
+ 9   Bwd Packet Length Min        2416 non-null   float64
+ 10  Bwd Packet Length Mean       2416 non-null   float64
+ 11  Bwd Packet Length Std        2416 non-null   float64
+ 12  Flow Bytes/s                 2416 non-null   float64
+ 13  Flow Packets/s               2416 non-null   float64
+ 14  Flow IAT Mean                2416 non-null   float64
+ 15  Flow IAT Std                 2416 non-null   float64
+ 16  Flow IAT Max                 2416 non-null   float64
+ 17  Flow IAT Min                 2416 non-null   float64
+ 18  Fwd IAT Total                2416 non-null   float64
+ 19  Fwd IAT Mean                 2416 non-null   float64
+ 20  Fwd IAT Std                  2416 non-null   float64
+ 21  Fwd IAT Max                  2416 non-null   float64
+ 22  Fwd IAT Min                  2416 non-null   float64
+ 23  Bwd IAT Total                2416 non-null   float64
+ 24  Bwd IAT Mean                 2416 non-null   float64
+ 25  Bwd IAT Std                  2416 non-null   float64
+ 26  Bwd IAT Max                  2416 non-null   float64
+ 27  Bwd IAT Min                  2416 non-null   float64
+ 28  Fwd Header Length            2416 non-null   float64
+ 29  Bwd Header Length            2416 non-null   float64
+ 30  Fwd Packets/s                2416 non-null   float64
+ 31  Bwd Packets/s                2416 non-null   float64
+ 32  Min Packet Length            2416 non-null   float64
+ 33  Max Packet Length            2416 non-null   float64
+ 34  Packet Length Mean           2416 non-null   float64
+ 35  Packet Length Std            2416 non-null   float64
+ 36  Packet Length Variance       2416 non-null   float64
+ 37  FIN Flag Count               2416 non-null   float64
+ 38  PSH Flag Count               2416 non-null   float64
+ 39  ACK Flag Count               2416 non-null   float64
+ 40  Average Packet Size          2416 non-null   float64
+ 41  Subflow Fwd Bytes            2416 non-null   float64
+ 42  Init_Win_bytes_forward       2416 non-null   float64
+ 43  Init_Win_bytes_backward      2416 non-null   float64
+ 44  act_data_pkt_fwd             2416 non-null   float64
+ 45  min_seg_size_forward         2416 non-null   float64
+ 46  Active Mean                  2416 non-null   float64
+ 47  Active Max                   2416 non-null   float64
+ 48  Active Min                   2416 non-null   float64
+ 49  Idle Mean                    2416 non-null   float64
+ 50  Idle Max                     2416 non-null   float64
+ 51  Idle Min                     2416 non-null   float64
+ 52  Attack Type                  2416 non-null   object 
+dtypes: float64(52), object(1)
+memory usage: 1000.5+ KB
+
+CELL 7: ok
+
+CELL 8: ok
+Columns with missing values:
+None — dataset is already clean.
+
+CELL 9: ok
+Columns with infinite values:
+None — dataset is already clean.
+
+CELL 10: ok
+Duplicate rows: 16
+
+CELL 11: ok
+Attack Type value counts:
+Attack Type
+Normal Traffic    1986
+DoS                 72
+DDoS                72
+Port Scanning       72
+Brute Force         72
+Web Attacks         71
+Bots                71
+Name: count, dtype: int64
+
+CELL 14: ok
+
+FutureWarning: 
+
+Passing `palette` without assigning `hue` is deprecated and will be removed in v0.14.0. Assign the `y` variable to `hue` and set `legend=False` for the same effect.
+
+CELL 15: ok
+['Normal Traffic' 'DoS' 'DDoS' 'Port Scanning' 'Brute Force' 'Web Attacks'
+ 'Bots']
+
+CELL 17: ok
+Binary Label
+Normal      1986
+Abnormal     430
+Name: count, dtype: int64
+
+Class imbalance ratio (Normal : Abnormal) = 4.62 : 1
+
+CELL 19: ok
+
+FutureWarning: 
+
+Passing `palette` without assigning `hue` is deprecated and will be removed in v0.14.0. Assign the `x` variable to `hue` and set `legend=False` for the same effect.
+
+PendingDeprecationWarning: vert: bool will be deprecated in a future version. Use orientation: {'vertical', 'horizontal'} instead.
+PendingDeprecationWarning: vert: bool will be deprecated in a future version. Use orientation: {'vertical', 'horizontal'} instead.
+FutureWarning: 
+
+Passing `palette` without assigning `hue` is deprecated and will be removed in v0.14.0. Assign the `x` variable to `hue` and set `legend=False` for the same effect.
+
+PendingDeprecationWarning: vert: bool will be deprecated in a future version. Use orientation: {'vertical', 'horizontal'} instead.
+PendingDeprecationWarning: vert: bool will be deprecated in a future version. Use orientation: {'vertical', 'horizontal'} instead.
+FutureWarning: 
+
+Passing `palette` without assigning `hue` is deprecated and will be removed in v0.14.0. Assign the `x` variable to `hue` and set `legend=False` for the same effect.
+
+PendingDeprecationWarning: vert: bool will be deprecated in a future version. Use orientation: {'vertical', 'horizontal'} instead.
+PendingDeprecationWarning: vert: bool will be deprecated in a future version. Use orientation: {'vertical', 'horizontal'} instead.
+FutureWarning: 
+
+Passing `palette` without assigning `hue` is deprecated and will be removed in v0.14.0. Assign the `x` variable to `hue` and set `legend=False` for the same effect.
+
+PendingDeprecationWarning: vert: bool will be deprecated in a future version. Use orientation: {'vertical', 'horizontal'} instead.
+PendingDeprecationWarning: vert: bool will be deprecated in a future version. Use orientation: {'vertical', 'horizontal'} instead.
+CELL 21: ok
+
+CELL 23: ok
+
+CELL 25: ok
+{'Abnormal': np.int64(0), 'Normal': np.int64(1)}
+
+CELL 26: ok
+Feature matrix shape: (2416, 52)
+Target vector shape: (2416,)
+
+CELL 27: ok
+Training set: 1,812 rows
+Test set:     604 rows
+
+CELL 28: ok
+
+CELL 30: ok
+Digital Twin tracks 14 features:
+['Flow Duration', 'Total Fwd Packets', 'Flow Bytes/s', 'Flow Packets/s', 'Flow IAT Mean', 'Fwd IAT Mean', 'Bwd IAT Mean', 'Packet Length Mean', 'Packet Length Std', 'FIN Flag Count', 'PSH Flag Count', 'ACK Flag Count', 'Init_Win_bytes_forward', 'Init_Win_bytes_backward']
+
+CELL 31: ok
+
+CELL 33: ok
+Baseline model trained on full feature set (no Digital Twin).
+
+CELL 35: ok
+TwinShield model trained on Digital Twin's reduced feature representation.
+
+CELL 37: ok
+
+CELL 39: ok
+
+CELL 41: ok
+              precision    recall  f1-score   support
+
+      Normal       0.65      0.14      0.23       108
+    Abnormal       0.84      0.98      0.91       496
+
+    accuracy                           0.83       604
+   macro avg       0.75      0.56      0.57       604
+weighted avg       0.81      0.83      0.79       604
+
+
+CELL 43: ok
+Baseline AUC:   0.9038
+TwinShield AUC: 0.8251
+AUC improvement: -0.0787
+
+CELL 45: ok
+
+CELL 46: ok
+Change in each metric — TwinShield relative to Baseline:
+(positive = improvement, except False Positive Rate where lower is better)
+
+Accuracy              -0.0447
+Precision             -0.0597
+Recall                 0.0262
+F1 Score              -0.0215
+False Positive Rate    0.3704
+dtype: float64
+
+CELL 48: ok

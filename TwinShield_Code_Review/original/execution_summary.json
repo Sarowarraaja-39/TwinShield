@@ -1,0 +1,74 @@
+{
+  "mode": "original",
+  "input_sha256": "a802b679c044b5b63dcefb9fbef2adf16d9ef43f3a46a9a9ad7ab36db7cfcb08",
+  "runtime": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "scipy": "1.17.0",
+    "sklearn": "1.8.0",
+    "matplotlib": "3.10.8",
+    "seaborn": "0.13.2"
+  },
+  "policy": {
+    "network_socket_denied": true,
+    "seccomp": true,
+    "cpu_seconds_limit": 120,
+    "address_space_bytes_limit": 4294967296,
+    "cpu_affinity": [
+      0,
+      1
+    ],
+    "filesystem_boundary": "existing hosted environment; no additional mount namespace"
+  },
+  "cells": [
+    {
+      "original_cell": 2,
+      "execution_count": 1,
+      "elapsed_seconds": 0.2295,
+      "warnings": [],
+      "stdout": "",
+      "status": "ok"
+    },
+    {
+      "original_cell": 4,
+      "execution_count": 2,
+      "elapsed_seconds": 0.0045,
+      "warnings": [],
+      "stdout": "",
+      "status": "error",
+      "error": {
+        "ename": "FileNotFoundError",
+        "evalue": "[Errno 2] No such file or directory: 'C:\\\\Users\\\\admin\\\\Downloads\\\\cicids2017_cleaned.csv'",
+        "traceback": [
+          "Traceback (most recent call last):",
+          "  File \"/workspace/scratch/91418a8cf18c/audit_work/run_notebook_audit.py\", line 132, in main",
+          "    exec(compile(tree, f'original_cell_{current_cell}', 'exec'), namespace)",
+          "  File \"original_cell_4\", line 1, in <module>",
+          "  File \"/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/pandas/io/parsers/readers.py\", line 1026, in read_csv",
+          "    return _read(filepath_or_buffer, kwds)",
+          "           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+          "  File \"/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/pandas/io/parsers/readers.py\", line 620, in _read",
+          "    parser = TextFileReader(filepath_or_buffer, **kwds)",
+          "             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+          "  File \"/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/pandas/io/parsers/readers.py\", line 1620, in __init__",
+          "    self._engine = self._make_engine(f, self.engine)",
+          "                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+          "  File \"/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/pandas/io/parsers/readers.py\", line 1880, in _make_engine",
+          "    self.handles = get_handle(",
+          "                   ^^^^^^^^^^^",
+          "  File \"/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/pandas/io/common.py\", line 873, in get_handle",
+          "    handle = open(",
+          "             ^^^^^",
+          "FileNotFoundError: [Errno 2] No such file or directory: 'C:\\\\Users\\\\admin\\\\Downloads\\\\cicids2017_cleaned.csv'"
+        ]
+      }
+    }
+  ],
+  "figures": [],
+  "status": "error",
+  "elapsed_seconds": 0.2341,
+  "executed_code_cells": 2,
+  "total_code_cells": 29,
+  "code_cells_unchanged": true
+}

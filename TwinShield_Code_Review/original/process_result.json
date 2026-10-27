@@ -1,0 +1,14 @@
+{
+  "mode": "original",
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "/workspace/scratch/91418a8cf18c/audit_work/run_notebook_audit.py",
+    "/workspace/scratch/91418a8cf18c/review_input/Dissertation.ipynb",
+    "original"
+  ],
+  "cwd": "/workspace/scratch/91418a8cf18c/TwinShield_Code_Review/original",
+  "exit_code": 1,
+  "stdout": "CELL 02 ok 0.230s\nCELL 04 error 0.004s\nFINAL error cells 2 / 29\n",
+  "stderr": "",
+  "wall_timeout_seconds": 150
+}

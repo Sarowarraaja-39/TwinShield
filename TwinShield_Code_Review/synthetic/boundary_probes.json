@@ -1,0 +1,57 @@
+[
+  {
+    "name": "positive_label_contract",
+    "expected": {
+      "Normal": 0,
+      "Abnormal": 1
+    },
+    "observed": {
+      "Abnormal": 0,
+      "Normal": 1
+    },
+    "defect_reproduced": true
+  },
+  {
+    "name": "unknown_and_missing_label_handling",
+    "expected": "Reject missing/unknown labels; normalise accepted labels",
+    "observed": [
+      "Normal",
+      "Abnormal",
+      "Abnormal",
+      "Abnormal"
+    ],
+    "defect_reproduced": true
+  },
+  {
+    "name": "missing_tracked_feature",
+    "expected": "Clear missing-feature error",
+    "observed": [
+      "Total Fwd Packets",
+      "Flow Bytes/s",
+      "Flow Packets/s",
+      "Flow IAT Mean",
+      "Fwd IAT Mean",
+      "Bwd IAT Mean",
+      "Packet Length Mean",
+      "Packet Length Std",
+      "FIN Flag Count",
+      "PSH Flag Count",
+      "ACK Flag Count",
+      "Init_Win_bytes_forward",
+      "Init_Win_bytes_backward"
+    ],
+    "defect_reproduced": true
+  },
+  {
+    "name": "single_class_evaluation",
+    "expected": "Explicit [0,1] matrix and defined unavailable-rate policy",
+    "observed": "ValueError: not enough values to unpack (expected 4, got 1)",
+    "defect_reproduced": true
+  },
+  {
+    "name": "infinite_numeric_feature",
+    "expected": "Reject or repair invalid numeric input before model fitting",
+    "observed": "ValueError: Input X contains infinity or a value too large for dtype('float64').",
+    "defect_reproduced": true
+  }
+]

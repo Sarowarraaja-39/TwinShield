@@ -1,0 +1,453 @@
+{
+  "mode": "synthetic",
+  "input_sha256": "a802b679c044b5b63dcefb9fbef2adf16d9ef43f3a46a9a9ad7ab36db7cfcb08",
+  "runtime": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "scipy": "1.17.0",
+    "sklearn": "1.8.0",
+    "matplotlib": "3.10.8",
+    "seaborn": "0.13.2"
+  },
+  "policy": {
+    "network_socket_denied": true,
+    "seccomp": true,
+    "cpu_seconds_limit": 120,
+    "address_space_bytes_limit": 4294967296,
+    "cpu_affinity": [
+      0,
+      1
+    ],
+    "filesystem_boundary": "existing hosted environment; no additional mount namespace"
+  },
+  "cells": [
+    {
+      "original_cell": 2,
+      "execution_count": 1,
+      "elapsed_seconds": 0.063,
+      "warnings": [],
+      "stdout": "",
+      "status": "ok"
+    },
+    {
+      "original_cell": 4,
+      "execution_count": 2,
+      "elapsed_seconds": 0.0615,
+      "warnings": [],
+      "stdout": "Dataset shape: 2,416 rows x 53 columns\n",
+      "status": "ok"
+    },
+    {
+      "original_cell": 6,
+      "execution_count": 3,
+      "elapsed_seconds": 0.0046,
+      "warnings": [],
+      "stdout": "<class 'pandas.core.frame.DataFrame'>\nRangeIndex: 2416 entries, 0 to 2415\nData columns (total 53 columns):\n #   Column                       Non-Null Count  Dtype  \n---  ------                       --------------  -----  \n 0   Destination Port             2416 non-null   float64\n 1   Flow Duration                2416 non-null   float64\n 2   Total Fwd Packets            2416 non-null   float64\n 3   Total Length of Fwd Packets  2416 non-null   float64\n 4   Fwd Packet Length Max        2416 non-null   float64\n 5   Fwd Packet Length Min        2416 non-null   float64\n 6   Fwd Packet Length Mean       2416 non-null   float64\n 7   Fwd Packet Length Std        2416 non-null   float64\n 8   Bwd Packet Length Max        2416 non-null   float64\n 9   Bwd Packet Length Min        2416 non-null   float64\n 10  Bwd Packet Length Mean       2416 non-null   float64\n 11  Bwd Packet Length Std        2416 non-null   float64\n 12  Flow Bytes/s                 2416 non-null   float64\n 13  Flow Packets/s               2416 non-null   float64\n 14  Flow IAT Mean                2416 non-null   float64\n 15  Flow IAT Std                 2416 non-null   float64\n 16  Flow IAT Max                 2416 non-null   float64\n 17  Flow IAT Min                 2416 non-null   float64\n 18  Fwd IAT Total                2416 non-null   float64\n 19  Fwd IAT Mean                 2416 non-null   float64\n 20  Fwd IAT Std                  2416 non-null   float64\n 21  Fwd IAT Max                  2416 non-null   float64\n 22  Fwd IAT Min                  2416 non-null   float64\n 23  Bwd IAT Total                2416 non-null   float64\n 24  Bwd IAT Mean                 2416 non-null   float64\n 25  Bwd IAT Std                  2416 non-null   float64\n 26  Bwd IAT Max                  2416 non-null   float64\n 27  Bwd IAT Min                  2416 non-null   float64\n 28  Fwd Header Length            2416 non-null   float64\n 29  Bwd Header Length            2416 non-null   float64\n 30  Fwd Packets/s                2416 non-null   float64\n 31  Bwd Packets/s                2416 non-null   float64\n 32  Min Packet Length            2416 non-null   float64\n 33  Max Packet Length            2416 non-null   float64\n 34  Packet Length Mean           2416 non-null   float64\n 35  Packet Length Std            2416 non-null   float64\n 36  Packet Length Variance       2416 non-null   float64\n 37  FIN Flag Count               2416 non-null   float64\n 38  PSH Flag Count               2416 non-null   float64\n 39  ACK Flag Count               2416 non-null   float64\n 40  Average Packet Size          2416 non-null   float64\n 41  Subflow Fwd Bytes            2416 non-null   float64\n 42  Init_Win_bytes_forward       2416 non-null   float64\n 43  Init_Win_bytes_backward      2416 non-null   float64\n 44  act_data_pkt_fwd             2416 non-null   float64\n 45  min_seg_size_forward         2416 non-null   float64\n 46  Active Mean                  2416 non-null   float64\n 47  Active Max                   2416 non-null   float64\n 48  Active Min                   2416 non-null   float64\n 49  Idle Mean                    2416 non-null   float64\n 50  Idle Max                     2416 non-null   float64\n 51  Idle Min                     2416 non-null   float64\n 52  Attack Type                  2416 non-null   object \ndtypes: float64(52), object(1)\nmemory usage: 1000.5+ KB\n",
+      "status": "ok"
+    },
+    {
+      "original_cell": 7,
+      "execution_count": 4,
+      "elapsed_seconds": 0.0527,
+      "warnings": [],
+      "stdout": "",
+      "status": "ok"
+    },
+    {
+      "original_cell": 8,
+      "execution_count": 5,
+      "elapsed_seconds": 0.0016,
+      "warnings": [],
+      "stdout": "Columns with missing values:\nNone \u2014 dataset is already clean.\n",
+      "status": "ok"
+    },
+    {
+      "original_cell": 9,
+      "execution_count": 6,
+      "elapsed_seconds": 0.001,
+      "warnings": [],
+      "stdout": "Columns with infinite values:\nNone \u2014 dataset is already clean.\n",
+      "status": "ok"
+    },
+    {
+      "original_cell": 10,
+      "execution_count": 7,
+      "elapsed_seconds": 0.0068,
+      "warnings": [],
+      "stdout": "Duplicate rows: 16\n",
+      "status": "ok"
+    },
+    {
+      "original_cell": 11,
+      "execution_count": 8,
+      "elapsed_seconds": 0.0005,
+      "warnings": [],
+      "stdout": "Attack Type value counts:\nAttack Type\nNormal Traffic    1986\nDoS                 72\nDDoS                72\nPort Scanning       72\nBrute Force         72\nWeb Attacks         71\nBots                71\nName: count, dtype: int64\n",
+      "status": "ok"
+    },
+    {
+      "original_cell": 14,
+      "execution_count": 9,
+      "elapsed_seconds": 0.1631,
+      "warnings": [
+        {
+          "category": "FutureWarning",
+          "message": "\n\nPassing `palette` without assigning `hue` is deprecated and will be removed in v0.14.0. Assign the `y` variable to `hue` and set `legend=False` for the same effect.\n"
+        }
+      ],
+      "stdout": "",
+      "status": "ok"
+    },
+    {
+      "original_cell": 15,
+      "execution_count": 10,
+      "elapsed_seconds": 0.0005,
+      "warnings": [],
+      "stdout": "['Normal Traffic' 'DoS' 'DDoS' 'Port Scanning' 'Brute Force' 'Web Attacks'\n 'Bots']\n",
+      "status": "ok"
+    },
+    {
+      "original_cell": 17,
+      "execution_count": 11,
+      "elapsed_seconds": 0.0517,
+      "warnings": [],
+      "stdout": "Binary Label\nNormal      1986\nAbnormal     430\nName: count, dtype: int64\n\nClass imbalance ratio (Normal : Abnormal) = 4.62 : 1\n",
+      "status": "ok"
+    },
+    {
+      "original_cell": 19,
+      "execution_count": 12,
+      "elapsed_seconds": 0.4172,
+      "warnings": [
+        {
+          "category": "FutureWarning",
+          "message": "\n\nPassing `palette` without assigning `hue` is deprecated and will be removed in v0.14.0. Assign the `x` variable to `hue` and set `legend=False` for the same effect.\n"
+        },
+        {
+          "category": "PendingDeprecationWarning",
+          "message": "vert: bool will be deprecated in a future version. Use orientation: {'vertical', 'horizontal'} instead."
+        },
+        {
+          "category": "PendingDeprecationWarning",
+          "message": "vert: bool will be deprecated in a future version. Use orientation: {'vertical', 'horizontal'} instead."
+        },
+        {
+          "category": "FutureWarning",
+          "message": "\n\nPassing `palette` without assigning `hue` is deprecated and will be removed in v0.14.0. Assign the `x` variable to `hue` and set `legend=False` for the same effect.\n"
+        },
+        {
+          "category": "PendingDeprecationWarning",
+          "message": "vert: bool will be deprecated in a future version. Use orientation: {'vertical', 'horizontal'} instead."
+        },
+        {
+          "category": "PendingDeprecationWarning",
+          "message": "vert: bool will be deprecated in a future version. Use orientation: {'vertical', 'horizontal'} instead."
+        },
+        {
+          "category": "FutureWarning",
+          "message": "\n\nPassing `palette` without assigning `hue` is deprecated and will be removed in v0.14.0. Assign the `x` variable to `hue` and set `legend=False` for the same effect.\n"
+        },
+        {
+          "category": "PendingDeprecationWarning",
+          "message": "vert: bool will be deprecated in a future version. Use orientation: {'vertical', 'horizontal'} instead."
+        },
+        {
+          "category": "PendingDeprecationWarning",
+          "message": "vert: bool will be deprecated in a future version. Use orientation: {'vertical', 'horizontal'} instead."
+        },
+        {
+          "category": "FutureWarning",
+          "message": "\n\nPassing `palette` without assigning `hue` is deprecated and will be removed in v0.14.0. Assign the `x` variable to `hue` and set `legend=False` for the same effect.\n"
+        },
+        {
+          "category": "PendingDeprecationWarning",
+          "message": "vert: bool will be deprecated in a future version. Use orientation: {'vertical', 'horizontal'} instead."
+        },
+        {
+          "category": "PendingDeprecationWarning",
+          "message": "vert: bool will be deprecated in a future version. Use orientation: {'vertical', 'horizontal'} instead."
+        }
+      ],
+      "stdout": "",
+      "status": "ok"
+    },
+    {
+      "original_cell": 21,
+      "execution_count": 13,
+      "elapsed_seconds": 0.3445,
+      "warnings": [],
+      "stdout": "",
+      "status": "ok"
+    },
+    {
+      "original_cell": 23,
+      "execution_count": 14,
+      "elapsed_seconds": 0.1735,
+      "warnings": [],
+      "stdout": "",
+      "status": "ok"
+    },
+    {
+      "original_cell": 25,
+      "execution_count": 15,
+      "elapsed_seconds": 0.0014,
+      "warnings": [],
+      "stdout": "{'Abnormal': np.int64(0), 'Normal': np.int64(1)}\n",
+      "status": "ok"
+    },
+    {
+      "original_cell": 26,
+      "execution_count": 16,
+      "elapsed_seconds": 0.0008,
+      "warnings": [],
+      "stdout": "Feature matrix shape: (2416, 52)\nTarget vector shape: (2416,)\n",
+      "status": "ok"
+    },
+    {
+      "original_cell": 27,
+      "execution_count": 17,
+      "elapsed_seconds": 0.0025,
+      "warnings": [],
+      "stdout": "Training set: 1,812 rows\nTest set:     604 rows\n",
+      "status": "ok"
+    },
+    {
+      "original_cell": 28,
+      "execution_count": 18,
+      "elapsed_seconds": 0.0025,
+      "warnings": [],
+      "stdout": "",
+      "status": "ok"
+    },
+    {
+      "original_cell": 30,
+      "execution_count": 19,
+      "elapsed_seconds": 0.001,
+      "warnings": [],
+      "stdout": "Digital Twin tracks 14 features:\n['Flow Duration', 'Total Fwd Packets', 'Flow Bytes/s', 'Flow Packets/s', 'Flow IAT Mean', 'Fwd IAT Mean', 'Bwd IAT Mean', 'Packet Length Mean', 'Packet Length Std', 'FIN Flag Count', 'PSH Flag Count', 'ACK Flag Count', 'Init_Win_bytes_forward', 'Init_Win_bytes_backward']\n",
+      "status": "ok"
+    },
+    {
+      "original_cell": 31,
+      "execution_count": 20,
+      "elapsed_seconds": 0.0016,
+      "warnings": [],
+      "stdout": "",
+      "status": "ok"
+    },
+    {
+      "original_cell": 33,
+      "execution_count": 21,
+      "elapsed_seconds": 0.0073,
+      "warnings": [],
+      "stdout": "Baseline model trained on full feature set (no Digital Twin).\n",
+      "status": "ok"
+    },
+    {
+      "original_cell": 35,
+      "execution_count": 22,
+      "elapsed_seconds": 0.5628,
+      "warnings": [],
+      "stdout": "TwinShield model trained on Digital Twin's reduced feature representation.\n",
+      "status": "ok"
+    },
+    {
+      "original_cell": 37,
+      "execution_count": 23,
+      "elapsed_seconds": 0.0156,
+      "warnings": [],
+      "stdout": "",
+      "status": "ok"
+    },
+    {
+      "original_cell": 39,
+      "execution_count": 24,
+      "elapsed_seconds": 0.2072,
+      "warnings": [],
+      "stdout": "",
+      "status": "ok"
+    },
+    {
+      "original_cell": 41,
+      "execution_count": 25,
+      "elapsed_seconds": 0.005,
+      "warnings": [],
+      "stdout": "              precision    recall  f1-score   support\n\n      Normal       0.65      0.14      0.23       108\n    Abnormal       0.84      0.98      0.91       496\n\n    accuracy                           0.83       604\n   macro avg       0.75      0.56      0.57       604\nweighted avg       0.81      0.83      0.79       604\n\n",
+      "status": "ok"
+    },
+    {
+      "original_cell": 43,
+      "execution_count": 26,
+      "elapsed_seconds": 0.1194,
+      "warnings": [],
+      "stdout": "Baseline AUC:   0.9038\nTwinShield AUC: 0.8251\nAUC improvement: -0.0787\n",
+      "status": "ok"
+    },
+    {
+      "original_cell": 45,
+      "execution_count": 27,
+      "elapsed_seconds": 0.1189,
+      "warnings": [],
+      "stdout": "",
+      "status": "ok"
+    },
+    {
+      "original_cell": 46,
+      "execution_count": 28,
+      "elapsed_seconds": 0.0014,
+      "warnings": [],
+      "stdout": "Change in each metric \u2014 TwinShield relative to Baseline:\n(positive = improvement, except False Positive Rate where lower is better)\n\nAccuracy              -0.0447\nPrecision             -0.0597\nRecall                 0.0262\nF1 Score              -0.0215\nFalse Positive Rate    0.3704\ndtype: float64\n",
+      "status": "ok"
+    },
+    {
+      "original_cell": 48,
+      "execution_count": 29,
+      "elapsed_seconds": 0.1575,
+      "warnings": [],
+      "stdout": "",
+      "status": "ok"
+    }
+  ],
+  "figures": [
+    "cell_14_figure_01.png",
+    "cell_17_figure_02.png",
+    "cell_19_figure_03.png",
+    "cell_21_figure_04.png",
+    "cell_23_figure_05.png",
+    "cell_39_figure_06.png",
+    "cell_43_figure_07.png",
+    "cell_45_figure_08.png",
+    "cell_48_figure_09.png"
+  ],
+  "status": "ok",
+  "elapsed_seconds": 2.5482,
+  "executed_code_cells": 29,
+  "total_code_cells": 29,
+  "observed_label_mapping": {
+    "Abnormal": 0,
+    "Normal": 1
+  },
+  "dataset_shape": [
+    2416,
+    55
+  ],
+  "original_metrics_class1_is_normal": [
+    {
+      "Model": "Baseline (Logistic Regression)",
+      "Accuracy": 0.8774834437086093,
+      "Precision": 0.8996212121212122,
+      "Recall": 0.9576612903225806,
+      "F1 Score": 0.927734375,
+      "False Positive Rate": 0.49074074074074076
+    },
+    {
+      "Model": "TwinShield (Random Forest + Digital Twin)",
+      "Accuracy": 0.8327814569536424,
+      "Precision": 0.8399311531841652,
+      "Recall": 0.9838709677419355,
+      "F1 Score": 0.9062209842154132,
+      "False Positive Rate": 0.8611111111111112
+    }
+  ],
+  "confusion_matrices_numeric_order_0_attack_1_normal": {
+    "Baseline": [
+      [
+        55,
+        53
+      ],
+      [
+        21,
+        475
+      ]
+    ],
+    "TwinShield": [
+      [
+        15,
+        93
+      ],
+      [
+        8,
+        488
+      ]
+    ]
+  },
+  "synthetic_metrics_reinterpreted_attack_positive": [
+    {
+      "Model": "Baseline",
+      "Accuracy": 0.8774834437086093,
+      "Attack Precision": 0.7236842105263158,
+      "Attack Recall": 0.5092592592592593,
+      "Attack F1": 0.5978260869565217,
+      "False Alarm Rate On Normal": 0.04233870967741935,
+      "Attack ROC AUC": 0.9037858422939068
+    },
+    {
+      "Model": "TwinShield",
+      "Accuracy": 0.8327814569536424,
+      "Attack Precision": 0.6521739130434783,
+      "Attack Recall": 0.1388888888888889,
+      "Attack F1": 0.22900763358778625,
+      "False Alarm Rate On Normal": 0.016129032258064516,
+      "Attack ROC AUC": 0.8251194743130227
+    }
+  ],
+  "boundary_probes": [
+    {
+      "name": "positive_label_contract",
+      "expected": {
+        "Normal": 0,
+        "Abnormal": 1
+      },
+      "observed": {
+        "Abnormal": 0,
+        "Normal": 1
+      },
+      "defect_reproduced": true
+    },
+    {
+      "name": "unknown_and_missing_label_handling",
+      "expected": "Reject missing/unknown labels; normalise accepted labels",
+      "observed": [
+        "Normal",
+        "Abnormal",
+        "Abnormal",
+        "Abnormal"
+      ],
+      "defect_reproduced": true
+    },
+    {
+      "name": "missing_tracked_feature",
+      "expected": "Clear missing-feature error",
+      "observed": [
+        "Total Fwd Packets",
+        "Flow Bytes/s",
+        "Flow Packets/s",
+        "Flow IAT Mean",
+        "Fwd IAT Mean",
+        "Bwd IAT Mean",
+        "Packet Length Mean",
+        "Packet Length Std",
+        "FIN Flag Count",
+        "PSH Flag Count",
+        "ACK Flag Count",
+        "Init_Win_bytes_forward",
+        "Init_Win_bytes_backward"
+      ],
+      "defect_reproduced": true
+    },
+    {
+      "name": "single_class_evaluation",
+      "expected": "Explicit [0,1] matrix and defined unavailable-rate policy",
+      "observed": "ValueError: not enough values to unpack (expected 4, got 1)",
+      "defect_reproduced": true
+    },
+    {
+      "name": "infinite_numeric_feature",
+      "expected": "Reject or repair invalid numeric input before model fitting",
+      "observed": "ValueError: Input X contains infinity or a value too large for dtype('float64').",
+      "defect_reproduced": true
+    }
+  ],
+  "code_cells_unchanged": true
+}

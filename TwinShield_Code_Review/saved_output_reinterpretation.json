@@ -1,0 +1,30 @@
+[
+  {
+    "Model": "Logistic Regression",
+    "Accuracy": 0.9553276165207842,
+    "Attack Precision": 0.880101396631767,
+    "Attack Recall": 0.8514714726001654,
+    "Attack F1": 0.8655497502220779,
+    "False Alarm Rate On Normal": 0.023569775700506335,
+    "Missed Attack Rate": 0.14852852739983463,
+    "TP_attack": 90617,
+    "FN_attack": 15807,
+    "FP_attack": 12345,
+    "TN_attack": 511419,
+    "Provenance": "Recomputed from counts in ORIGINAL SAVED confusion-matrix PNG; NOT a fresh dataset run"
+  },
+  {
+    "Model": "TwinShield Random Forest",
+    "Accuracy": 0.9976578417868953,
+    "Attack Precision": 0.9921960004502307,
+    "Attack Recall": 0.9939487333684132,
+    "Attack F1": 0.9930715935334873,
+    "False Alarm Rate On Normal": 0.001588501691601561,
+    "Missed Attack Rate": 0.0060512666315868605,
+    "TP_attack": 105780,
+    "FN_attack": 644,
+    "FP_attack": 832,
+    "TN_attack": 522932,
+    "Provenance": "Recomputed from counts in ORIGINAL SAVED confusion-matrix PNG; NOT a fresh dataset run"
+  }
+]

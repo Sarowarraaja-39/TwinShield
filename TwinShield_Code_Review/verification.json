@@ -1,0 +1,12 @@
+{
+  "source_sha256": "a802b679c044b5b63dcefb9fbef2adf16d9ef43f3a46a9a9ad7ab36db7cfcb08",
+  "code_cells_parse": 29,
+  "source_code_cells_unchanged_in_both_runs": true,
+  "original_failure_observed": "FileNotFoundError at original cell 4",
+  "synthetic_code_cells_executed": 29,
+  "figures_captured": 9,
+  "network_denial_verified_in_each_child": true,
+  "boundary_probes_executed": 5,
+  "real_dataset_benchmark_reproduced": false,
+  "saved_counts_sums_checked": true
+}
